@@ -36,6 +36,28 @@ const initalBalls = (() => {
 })();
 
 export const useStore = create((set) => ({
+  mode: "",
+  setMode: (mode: string) => {
+    set(() => ({
+      mode,
+    }));
+  },
+  resetGame: () => {
+    set(() => ({
+      mode: "",
+      point: 0,
+      hit: 0,
+      total: 0,
+      time: 0,
+      countDown: 3,
+    }));
+  },
+  countDown: 3,
+  setCountDown: (bol: boolean) => {
+    set({
+      countDown: bol,
+    });
+  },
   balls: initalBalls,
   point: 0,
   hit: 0,

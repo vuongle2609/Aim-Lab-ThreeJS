@@ -7,11 +7,21 @@ import { useStore } from "../hooks/useStore";
 
 const FPV = () => {
   const lock = useRef<boolean>(false);
-  const { camera, gl } = useThree();
+  const { camera, gl, controls } = useThree();
 
   const listener = new THREE.AudioListener();
-  const [setTotal] = useStore((state: any) => [state.setTotal]);
+  const [setTotal, countDown] = useStore((state: any) => [
+    state.setTotal,
+    state.countDown,
+  ]);
   camera.add(listener);
+
+  useEffect(() => {
+    if (!countDown) {
+      //@ts-ignore
+      controls?.lock();
+    }
+  }, [countDown, controls]);
 
   useEffect(() => {
     const handleShot = () => {
@@ -24,7 +34,7 @@ const FPV = () => {
         const audioLoader = new THREE.AudioLoader();
         audioLoader.load(shotSound, function (buffer) {
           sound.setBuffer(buffer);
-          sound.setVolume(0.5);
+          sound.setVolume(0.1);
           sound.play();
         });
       }
@@ -40,6 +50,7 @@ const FPV = () => {
   // return <OrbitControls args={[camera, gl.domElement]} />;
   return (
     <PointerLockControls
+      makeDefault
       args={[camera, gl.domElement]}
       onLock={() => {
         lock.current = true;

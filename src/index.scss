@@ -12,7 +12,6 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: lightblue;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -27,69 +26,4 @@ body {
   overflow: hidden;
   overscroll-behavior-y: none;
   font-size: 40px;
-}
-
-.cross {
-  position: absolute;
-  top: 46.4%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50.8%);
-  color: #fff;
-  font-weight: 300;
-}
-
-.score_board {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50.8%);
-  top: 10px;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  color: #fff;
-
-  .point,
-  .percent {
-    display: flex;
-    text-align: center;
-    font-size: 28px;
-    .prefix {
-      display: block;
-      min-width: 70px;
-      padding: 0 20px;
-    }
-
-    .number {
-      display: block;
-      min-width: 170px;
-      padding: 0 20px;
-    }
-  }
-
-  .point {
-    .prefix {
-      background: rgba(100, 70, 61, 0.8);
-    }
-
-    .number {
-      background: rgba(146, 84, 61, 0.8);
-    }
-  }
-
-  .percent {
-    .prefix {
-      background: rgba(30, 50, 83, 0.8);
-    }
-
-    .number {
-      background: rgba(59, 90, 151, 0.8);
-    }
-  }
-
-  .minute {
-    background: rgba(40, 42, 37, 0.7);
-    font-size: 38px;
-    padding: 10px 40px;
-  }
 }
