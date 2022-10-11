@@ -1,11 +1,11 @@
 import { Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useState } from "react";
 import "react-dat-gui/build/react-dat-gui.css";
 import Balls from "./Components/Balls";
 import Box from "./Components/Box";
 import FPV from "./Components/FPV";
 import Ground from "./Components/Ground";
+import ScoreBoard from "./Components/ScoreBoard";
 import SmallWall from "./Components/SmallWall";
 import Walls from "./Components/Walls";
 
@@ -43,6 +43,7 @@ function App() {
         </group>
       </Canvas>
       <div className="cross">+</div>
+      <ScoreBoard />
       {/* <DatGui data={boxState} onUpdate={setBoxState}>
         <DatFolder title="size" closed={false}>
           <DatNumber path="sizeX" min={-30} max={30} step={0.1} />

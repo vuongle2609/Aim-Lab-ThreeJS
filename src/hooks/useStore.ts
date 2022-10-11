@@ -37,6 +37,9 @@ const initalBalls = (() => {
 
 export const useStore = create((set) => ({
   balls: initalBalls,
+  hit: 0,
+  total: 0,
+  time: 0,
   clickBall: (indexClicked: number) => {
     set((prev: any) => {
       let hasVisibleReplace = false;
@@ -67,7 +70,13 @@ export const useStore = create((set) => ({
                 visible,
               };
         }),
+        hit: prev.hit + 1,
       };
     });
+  },
+  setTotal: () => {
+    set((prev: any) => ({
+      total: prev.total + 1,
+    }));
   },
 }));
