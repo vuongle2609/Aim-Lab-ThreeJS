@@ -15,18 +15,18 @@ const Balls = () => {
             key={"balls" + index}
             onClick={(e) => {
               e.stopPropagation();
-              console.clear();
-              const boundingBox = new THREE.Box3().setFromObject(e.object);
-              const ballSize = boundingBox.getSize(new THREE.Vector3());
-              // console.log("size", boundingBox.getSize(new THREE.Vector3()));
-              console.log("ray", e);
-              // console.log("o dire", e.object.position);
+              // console.clear();
+              // const boundingBox = new THREE.Box3().setFromObject(e.object);
+              // const ballSize = boundingBox.getSize(new THREE.Vector3());
+              // // console.log("size", boundingBox.getSize(new THREE.Vector3()));
+              // console.log("ray", e);
+              // // console.log("o dire", e.object.position);
 
-              console.log({
-                x: ballSize.x + e.object.position.x,
-                y: ballSize.y + e.object.position.y,
-                z: ballSize.z + e.object.position.z,
-              });
+              // console.log({
+              //   x: ballSize.x + e.object.position.x,
+              //   y: ballSize.y + e.object.position.y,
+              //   z: ballSize.z + e.object.position.z,
+              // });
 
               if (item.visible) {
                 clickBall(index);

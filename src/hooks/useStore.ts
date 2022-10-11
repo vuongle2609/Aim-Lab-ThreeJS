@@ -37,6 +37,7 @@ const initalBalls = (() => {
 
 export const useStore = create((set) => ({
   balls: initalBalls,
+  point: 0,
   hit: 0,
   total: 0,
   time: 0,
@@ -71,6 +72,7 @@ export const useStore = create((set) => ({
               };
         }),
         hit: prev.hit + 1,
+        point: prev.point + 100,
       };
     });
   },
