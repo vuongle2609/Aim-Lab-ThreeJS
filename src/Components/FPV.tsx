@@ -1,8 +1,8 @@
-import { PointerLockControls, OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
+import { PointerLockControls } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import shotSound from "../assets/sound/shot.mp3";
 import { useEffect, useRef } from "react";
+import * as THREE from "three";
+import shotSound from "../assets/sound/shot.mp3";
 import { useStore } from "../hooks/useStore";
 
 const listener = new THREE.AudioListener();

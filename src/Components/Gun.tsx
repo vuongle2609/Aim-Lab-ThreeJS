@@ -1,6 +1,5 @@
-import * as THREE from "three";
-import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
@@ -18,9 +17,6 @@ const Gun = (props: JSX.IntrinsicElements["group"]) => {
   const { nodes, materials } = useGLTF(
     "./model/gun.gltf"
   ) as unknown as GLTFResult;
-
-  // materials["M4-1"].metalness = 0;
-  // materials["M4-2"].metalness = 0;
 
   return (
     <group

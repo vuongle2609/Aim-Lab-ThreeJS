@@ -15,11 +15,7 @@ const Ground = () => {
       dispose={null}
     >
       <planeGeometry attach="geometry" args={[WIDTH, HEIGHT]} />
-      <meshPhongMaterial
-        attach="material"
-        map={objectTexture}
-        // color={0xf0f0f0}
-      />
+      <meshPhongMaterial attach="material" map={objectTexture} />
     </mesh>
   );
 };
