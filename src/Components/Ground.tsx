@@ -1,18 +1,10 @@
-import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
+import { wallTexture } from "../assets/images/textures";
 
-import { mappingObject } from "../assets/images/images";
+const objectTexture = wallTexture(200, 200);
 
 const Ground = () => {
   const WIDTH = 100;
   const HEIGHT = 100;
-
-  const objectTexture = new TextureLoader().load(mappingObject);
-
-  objectTexture.magFilter = NearestFilter;
-  objectTexture.wrapS = RepeatWrapping;
-  objectTexture.wrapT = RepeatWrapping;
-
-  objectTexture.repeat.set(200, 200);
 
   return (
     <mesh
@@ -20,12 +12,13 @@ const Ground = () => {
       receiveShadow
       rotation-x={-Math.PI / 2}
       position={[0, -0.8, 0]}
+      dispose={null}
     >
       <planeGeometry attach="geometry" args={[WIDTH, HEIGHT]} />
       <meshPhongMaterial
         attach="material"
         map={objectTexture}
-        color={0xf0f0f0}
+        // color={0xf0f0f0}
       />
     </mesh>
   );

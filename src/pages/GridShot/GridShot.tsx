@@ -12,7 +12,7 @@ import "./index.scss";
 const GridShot = () => {
   return (
     <>
-      <Canvas shadows>
+      <Canvas shadows className="shotlayer">
         <Sky sunPosition={[100, 400, 300]} />
         <ambientLight intensity={0.2} />
         <pointLight

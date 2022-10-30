@@ -1,6 +1,9 @@
+import { useState } from "react";
+// import DatGui, { DatFolder, DatNumber } from "react-dat-gui";
 import { useStore } from "./hooks/useStore";
 import CalculateScreen from "./pages/CalculateScreen/CalculateScreen";
 import GridShot from "./pages/GridShot/GridShot";
+import GunLayer from "./pages/GunLayer/GunLayer";
 import StartScreen from "./pages/StartScreen/StartScreen";
 
 function App() {
@@ -20,7 +23,12 @@ function App() {
   return (
     <>
       {!mode && <StartScreen />}
-      {mode === "grid" && <GridShot />}
+      {mode === "grid" && (
+        <>
+          <GridShot />
+          <GunLayer />
+        </>
+      )}
       {mode === "calculate" && <CalculateScreen />}
       {/* <DatGui data={boxState} onUpdate={setBoxState}>
         <DatFolder title="size" closed={false}>

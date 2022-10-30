@@ -1,21 +1,16 @@
-import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
+import { wallTexture } from "../assets/images/textures";
 
-import { mappingObject } from "../assets/images/images";
+const objectTexture = wallTexture(28, 4);
 
 const SmallWall = () => {
-  const objectTexture = new TextureLoader().load(mappingObject);
-
-  objectTexture.magFilter = NearestFilter;
-
-  objectTexture.wrapS = RepeatWrapping;
-  objectTexture.wrapT = RepeatWrapping;
-
-  objectTexture.repeat.set(28, 4);
-
   return (
     <mesh position={[0, -0.18, 0.62]} castShadow receiveShadow>
       <planeGeometry args={[14, 2, 1]} />
-      <meshPhongMaterial attach="material" map={objectTexture} />
+      <meshPhongMaterial
+        attach="material"
+        map={objectTexture}
+        // color={0xf0f0f0}
+      />
     </mesh>
   );
 };

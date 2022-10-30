@@ -1,18 +1,9 @@
-import { NearestFilter, RepeatWrapping, TextureLoader } from "three";
+import { wallTexture } from "../assets/images/textures";
 
-import { mappingObject } from "../assets/images/images";
+const objectTexture = wallTexture(28, 14);
 
 const Walls = () => {
   const WALL_HEIGHT = 6;
-
-  const objectTexture = new TextureLoader().load(mappingObject);
-
-  objectTexture.magFilter = NearestFilter;
-
-  objectTexture.wrapS = RepeatWrapping;
-  objectTexture.wrapT = RepeatWrapping;
-
-  objectTexture.repeat.set(28, 14);
 
   return (
     <group position={[0, 0, 7]} castShadow receiveShadow>

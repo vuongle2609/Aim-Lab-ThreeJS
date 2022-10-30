@@ -5,11 +5,19 @@ import shotSound from "../assets/sound/shot.mp3";
 import { useEffect, useRef } from "react";
 import { useStore } from "../hooks/useStore";
 
+const listener = new THREE.AudioListener();
+
+const audioLoader = new THREE.AudioLoader();
+
+let bufferSound: AudioBuffer | null = null;
+audioLoader.load(shotSound, (buffer) => {
+  bufferSound = buffer;
+});
+
 const FPV = () => {
   const lock = useRef<boolean>(false);
   const { camera, gl, controls } = useThree();
 
-  const listener = new THREE.AudioListener();
   const [setTotal, countDown] = useStore((state: any) => [
     state.setTotal,
     state.countDown,
@@ -25,18 +33,12 @@ const FPV = () => {
 
   useEffect(() => {
     const handleShot = () => {
-      if (lock.current) {
-        // create a global audio source
+      if (lock.current && bufferSound) {
         setTotal();
-        const sound = new THREE.Audio(listener);
-
-        // load a sound and set it as the Audio object's buffer
-        const audioLoader = new THREE.AudioLoader();
-        audioLoader.load(shotSound, function (buffer) {
-          sound.setBuffer(buffer);
-          sound.setVolume(0.1);
-          sound.play();
-        });
+        const soundGun = new THREE.Audio(listener);
+        soundGun.setBuffer(bufferSound);
+        soundGun.setVolume(0.5);
+        soundGun.play();
       }
     };
 
