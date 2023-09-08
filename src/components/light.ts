@@ -25,11 +25,12 @@ export default class Light {
     directionalLight.shadow.camera.right = 50;
     directionalLight.shadow.camera.near = 1;
     directionalLight.shadow.camera.far = 200;
+    directionalLight.shadow.mapSize.set( 4096, 4096);
 
-    const directionalLightHelper = new CameraHelper(
-      directionalLight.shadow.camera
-    );
-    scene.add(directionalLightHelper);
+    // const directionalLightHelper = new CameraHelper(
+    //   directionalLight.shadow.camera
+    // );
+    // scene.add(directionalLightHelper);
 
     scene.add(directionalLight);
 

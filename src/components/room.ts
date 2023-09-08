@@ -14,28 +14,14 @@ export default class Room {
   }
 
   async initialize() {
-    const cube = new Mesh(
-      new BoxGeometry(4, 4, 4),
-      new MeshBasicMaterial({ color: 0x0d4c92 })
-    );
-    cube.castShadow = true;
-    cube.receiveShadow = true;
 
-    const room = await GLTFLoader("untitled.gltf");
-
-    console.log(room);
-
+    // ball color 4F709C
     const newMaterial = new MeshStandardMaterial({
-      color: 0xd1d8e0,
+      color: 0xF0F0F0,
     });
 
-    room.scene.traverse((node) => {
-      if (node.type === "Mesh") {
-        node.receiveShadow = true;
-        node.castShadow = true;
-        //@ts-ignore
-        node.material = newMaterial;
-      }
+    const room = await GLTFLoader("room.gltf", {
+      material: newMaterial,
     });
 
     room.scene.scale.set(14, 14, 14);

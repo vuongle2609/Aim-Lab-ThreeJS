@@ -9,7 +9,7 @@ class Three {
   renderer: THREE.WebGLRenderer;
   scene: THREE.Scene;
   camera: THREE.PerspectiveCamera;
-  control: OrbitControls;
+  control: PointerLockControls;
 
   constructor() {
     this.initialize();
@@ -38,15 +38,15 @@ class Three {
     );
 
     this.scene = new THREE.Scene();
-    // this.scene.background = new THREE.Color("#DEF5E5");
+    this.scene.background = new THREE.Color("#87CEEB");
 
-    this.control = new OrbitControls(
+    this.control = new PointerLockControls(
       this.camera,
       this.renderer.domElement
     );
 
     this.camera.position.set(0, 3, 20);
-    this.camera.lookAt(0, 0, 0);
+    this.camera.lookAt(0, 4, 0);
 
     setTimeout(() => {
       const light = new Light();
@@ -56,17 +56,17 @@ class Three {
     const btnFocus = document.querySelector("#focus");
     const modalFocus = document.querySelector("#modal_focus") as HTMLDivElement;
 
-    // btnFocus?.addEventListener("click", () => {
-    //   this.control.lock();
-    // });
+    btnFocus?.addEventListener("click", () => {
+      this.control.lock();
+    });
 
-    // this.control.addEventListener("lock", function () {
-    //   if (modalFocus) modalFocus.style.display = "none";
-    // });
+    this.control.addEventListener("lock", function () {
+      if (modalFocus) modalFocus.style.display = "none";
+    });
 
-    // this.control.addEventListener("unlock", function () {
-    //   if (modalFocus) modalFocus.style.display = "flex";
-    // });
+    this.control.addEventListener("unlock", function () {
+      if (modalFocus) modalFocus.style.display = "flex";
+    });
 
     this.RAF(0);
   }
