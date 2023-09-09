@@ -1,15 +1,23 @@
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "./style.css";
 import * as THREE from "three";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls";
 import Room from "./components/room";
 import Light from "./components/light";
+import { GUI } from "dat.gui";
+import Gun from "./components/gun";
 
 class Three {
   renderer: THREE.WebGLRenderer;
+
   scene: THREE.Scene;
   camera: THREE.PerspectiveCamera;
+
+  sceneGun: THREE.Scene;
+  cameraGun: THREE.PerspectiveCamera;
+
   control: PointerLockControls;
+  gui: GUI;
 
   constructor() {
     this.initialize();
@@ -30,27 +38,44 @@ class Three {
       false
     );
 
+    this.gui = new GUI({});
+
+    // create 2 separate scene for gun and game
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color("#87CEEB");
+
+    this.sceneGun = new THREE.Scene();
+
+    // handle camera
     this.camera = new THREE.PerspectiveCamera(
-      50,
+      60,
       window.innerWidth / window.innerHeight,
-      16 / 9,
+      0.1,
       500
     );
 
-    this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color("#87CEEB");
+    this.cameraGun = new THREE.PerspectiveCamera(
+      60,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      500
+    );
+
+    this.camera.position.set(0, 3, 20);
+    this.camera.lookAt(0, 4, 0);
+
+    this.cameraGun.position.set(0, 3, 20);
+    this.cameraGun.lookAt(0, 4, 0);
 
     this.control = new PointerLockControls(
       this.camera,
       this.renderer.domElement
     );
 
-    this.camera.position.set(0, 3, 20);
-    this.camera.lookAt(0, 4, 0);
-
     setTimeout(() => {
       const light = new Light();
       const room = new Room();
+      const gun = new Gun();
     }, 200);
 
     const btnFocus = document.querySelector("#focus");
@@ -82,10 +107,18 @@ class Three {
       this.RAF(t);
     });
 
+    this.renderer.autoClear = true;
+
     this.renderer.render(this.scene, this.camera);
+
+    this.renderer.autoClear = false;
+
+    this.renderer.render(this.sceneGun, this.cameraGun);
   }
 }
 
 const game = new Three();
 
 export const scene = game.scene;
+export const gui = game.gui;
+export const sceneGun = game.sceneGun;

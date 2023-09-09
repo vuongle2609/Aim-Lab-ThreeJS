@@ -5,7 +5,7 @@ import {
   MeshPhongMaterial,
   MeshStandardMaterial,
 } from "three";
-import { scene } from "@/main";
+import { gui, scene } from "@/main";
 import { GLTFLoader } from "@/utils/loader";
 
 export default class Room {
@@ -14,10 +14,9 @@ export default class Room {
   }
 
   async initialize() {
-
     // ball color 4F709C
     const newMaterial = new MeshStandardMaterial({
-      color: 0xF0F0F0,
+      color: 0xf0f0f0,
     });
 
     const room = await GLTFLoader("room.gltf", {

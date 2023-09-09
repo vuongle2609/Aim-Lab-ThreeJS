@@ -184,9 +184,9 @@
         -1,
         2.220446049250313e-16,
         0,
-        3.8928379988851702,
-        99,
-        -49.99999999999999,
+        -0.11169303948629826,
+        103.52317673447672,
+        -28.37091596141711,
         1
       ],
       "name": "Rectangle 6",
@@ -264,24 +264,23 @@
     },
     {
       "matrix": [
-        0.5390573509542081,
-        -1.4556656977027238e-8,
-        -0.8422690617505972,
+        0.9968648991657735,
+        -2.1046693829580854e-8,
+        -0.07912251772543519,
         0,
-        -0.1800645952707446,
-        0.976880707731293,
-        -0.11524245915629795,
+        0.003983960271749366,
+        0.9987315575630387,
+        0.05019366482196614,
         0,
-        0.8227963988206406,
-        0.2137851324634336,
-        0.5265947238867643,
+        0.07902215430982232,
+        -0.05035152358872883,
+        0.9956004335076036,
         0,
-        337.51731768315125,
-        137.92662699639794,
-        133.1688709870317,
+        22.582075452324357,
+        10.758997748273515,
+        330.10985424534255,
         1
       ],
-      "name": "Personal Camera",
       "camera": 0
     },
     {
@@ -460,89 +459,89 @@
     {
       "buffer": 0,
       "byteOffset": 760,
+      "byteLength": 288,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1048,
+      "byteLength": 288,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1336,
+      "byteLength": 192,
+      "target": 34962,
+      "byteStride": 8
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1528,
+      "byteLength": 144,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1672,
       "byteLength": 48,
       "target": 34962,
       "byteStride": 12
     },
     {
       "buffer": 0,
-      "byteOffset": 808,
+      "byteOffset": 1720,
       "byteLength": 48,
       "target": 34962,
       "byteStride": 12
     },
     {
       "buffer": 0,
-      "byteOffset": 856,
+      "byteOffset": 1768,
       "byteLength": 32,
       "target": 34962,
       "byteStride": 8
     },
     {
       "buffer": 0,
-      "byteOffset": 888,
+      "byteOffset": 1800,
       "byteLength": 24,
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteOffset": 912,
+      "byteOffset": 1824,
       "byteLength": 48,
       "target": 34962,
       "byteStride": 12
     },
     {
       "buffer": 0,
-      "byteOffset": 960,
+      "byteOffset": 1872,
       "byteLength": 48,
       "target": 34962,
       "byteStride": 12
     },
     {
       "buffer": 0,
-      "byteOffset": 1008,
+      "byteOffset": 1920,
       "byteLength": 32,
       "target": 34962,
       "byteStride": 8
     },
     {
       "buffer": 0,
-      "byteOffset": 1040,
-      "byteLength": 24,
-      "target": 34963
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 1064,
-      "byteLength": 48,
-      "target": 34962,
-      "byteStride": 12
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 1112,
-      "byteLength": 48,
-      "target": 34962,
-      "byteStride": 12
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 1160,
-      "byteLength": 32,
-      "target": 34962,
-      "byteStride": 8
-    },
-    {
-      "buffer": 0,
-      "byteOffset": 1192,
+      "byteOffset": 1952,
       "byteLength": 24,
       "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 1216,
-      "uri": "data:application/octet-stream;base64,AABIwiM5FkMAAAAAAABIQiM5FsMAAAAAAABIQiM5FkMAAAAAAABIwiM5FsMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAAAAEjChPwVQwAAAAAAAEhChPwVwwAAAAAAAEhChPwVQwAAAAAAAEjChPwVwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAAAASMIAABZDAAAAAAAASEIAABbDAAAAAAAASEIAABZDAAAAAAAASMIAABbDAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAEAAAACAAAAAQAAAAAAAAADAAAAJR2OwQAAFkMAAAAAJR2OQQAAFsMAAAAAJR2OQQAAFkMAAAAAJR2OwQAAFsMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAAlHY7BAAAWQwAAAAAlHY5BAAAWwwAAAAAlHY5BAAAWQwAAAAAlHY7BAAAWwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAAAASMKR5CBDAAAAAAAASEKR5CDDAAAAAAAASEKR5CBDAAAAAAAASMKR5CDDAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAEAAAACAAAAAQAAAAAAAAADAAAAAABIwgAAFkMAAAAAAABIQgAAFsMAAAAAAABIQgAAFkMAAAAAAABIwgAAFsMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAD/IhbDAAAWQwAAAAD/IhZDAAAWwwAAAAD/IhZDAAAWQwAAAAD/IhbDAAAWwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAA=="
+      "byteLength": 1976,
+      "uri": "data:application/octet-stream;base64,AABIwiM5FkMAAAAAAABIQiM5FsMAAAAAAABIQiM5FkMAAAAAAABIwiM5FsMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAAAAEjChPwVQwAAAAAAAEhChPwVwwAAAAAAAEhChPwVQwAAAAAAAEjChPwVwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAAAASMIAABZDAAAAAAAASEIAABbDAAAAAAAASEIAABZDAAAAAAAASMIAABbDAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAEAAAACAAAAAQAAAAAAAAADAAAAJR2OwQAAFkMAAAAAJR2OQQAAFsMAAAAAJR2OQQAAFkMAAAAAJR2OwQAAFsMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAAlHY7BAAAWQwAAAAAlHY5BAAAWwwAAAAAlHY5BAAAWQwAAAAAlHY7BAAAWwwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAAAAAAAAAAAAAAABAAAAAgAAAAEAAAAAAAAAAwAAAKTXhUIAABZDF0KvQKTXhUIAABZDAAAAAKTXhUIAABZDF0KvQKTXhUIAABZDAAAAAKTXhcIAABZDF0KvQKTXhcIAABZDAAAAAKTXhcIAABZDF0KvQKTXhcIAABZDAAAAAKTXhcIAABbDF0KvQKTXhcIAABbDAAAAAKTXhcIAABbDF0KvQKTXhcIAABbDAAAAAKTXhUIAABbDF0KvQKTXhUIAABbDAAAAAKTXhUIAABbDF0KvQKTXhUIAABbDAAAAAKTXhcIAABZDF0KvQKTXhcIAABZDAAAAAKTXhUIAABbDF0KvQKTXhUIAABbDAAAAAKTXhUIAABZDF0KvQKTXhUIAABZDAAAAAKTXhcIAABbDF0KvQKTXhcIAABbDAAAAAAAAAIAAAIA/AAAAAAAAAIAAAIA/AAAAgAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAgAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAgAAAAIAAAIA/AAAAAAAAAIAAAIA/AAAAgAAAAIAAAIC/AAAAAAAAAIAAAIC/AAAAgAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAgAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAgAAAAIAAAIC/AAAAAAAAAIAAAIC/AAAAgAAAAAAAAAAAAACAPwAAAAAAAAAAAACAvwAAAAAAAAAAAACAPwAAAAAAAAAAAACAvwAAAAAAAAAAAACAPwAAAAAAAAAAAACAvwAAAAAAAAAAAACAPwAAAAAAAAAAAACAvwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAQAAAAYAAAABAAAABwAAAAoAAAAEAAAABQAAAAoAAAAFAAAACwAAAA4AAAAIAAAACQAAAA4AAAAJAAAADwAAAAIAAAAMAAAADQAAAAIAAAANAAAAAwAAABAAAAASAAAAFAAAABUAAAATAAAAEQAAABIAAAAQAAAAFgAAABcAAAARAAAAEwAAAAAASMIAABZDAAAAAAAASEIAABbDAAAAAAAASEIAABZDAAAAAAAASMIAABbDAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAEAAAACAAAAAQAAAAAAAAADAAAA/yIWwwAAFkMAAAAA/yIWQwAAFsMAAAAA/yIWQwAAFkMAAAAA/yIWwwAAFsMAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAQAAAAIAAAABAAAAAAAAAAMAAAA="
     }
   ],
   "accessors": [
@@ -839,15 +838,15 @@
     {
       "bufferView": 20,
       "componentType": 5126,
-      "count": 4,
+      "count": 24,
       "max": [
-        50,
-        160.89283752441406,
-        0
+        66.92117309570312,
+        150,
+        5.476817607879639
       ],
       "min": [
-        -50,
-        -160.89283752441406,
+        -66.92117309570312,
+        -150,
         0
       ],
       "type": "VEC3"
@@ -855,23 +854,23 @@
     {
       "bufferView": 21,
       "componentType": 5126,
-      "count": 4,
+      "count": 24,
       "max": [
-        0,
-        0,
+        1,
+        1,
         1
       ],
       "min": [
-        0,
-        0,
-        1
+        -1,
+        -1,
+        -1
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 22,
       "componentType": 5126,
-      "count": 4,
+      "count": 24,
       "max": [
         1,
         1
@@ -885,9 +884,9 @@
     {
       "bufferView": 23,
       "componentType": 5125,
-      "count": 6,
+      "count": 36,
       "max": [
-        3
+        23
       ],
       "min": [
         0
@@ -1473,33 +1472,33 @@
           "extras": {
             "shape": {
               "points": [
-                -50,
-                160.89283799888517,
-                -50,
-                160.89283799888517,
-                -50,
-                160.89283799888517,
+                -66.9211728456106,
+                150,
+                -66.9211728456106,
+                150,
+                -66.9211728456106,
+                150,
                 0,
-                50,
-                160.89283799888517,
-                50,
-                160.89283799888517,
-                50,
-                160.89283799888517,
+                66.9211728456106,
+                150,
+                66.9211728456106,
+                150,
+                66.9211728456106,
+                150,
                 0,
-                50,
-                -160.89283799888517,
-                50,
-                -160.89283799888517,
-                50,
-                -160.89283799888517,
+                66.9211728456106,
+                -150,
+                66.9211728456106,
+                -150,
+                66.9211728456106,
+                -150,
                 0,
-                -50,
-                -160.89283799888517,
-                -50,
-                -160.89283799888517,
-                -50,
-                -160.89283799888517,
+                -66.9211728456106,
+                -150,
+                -66.9211728456106,
+                -150,
+                -66.9211728456106,
+                -150,
                 0
               ],
               "shapeHoles": [],
@@ -1507,8 +1506,8 @@
               "roundness": 0
             },
             "parameters": {
-              "width": 100,
-              "depth": 0,
+              "width": 133.8423456912212,
+              "depth": 5.476817630236809,
               "cornerRadius": [
                 0,
                 0,
@@ -1518,7 +1517,7 @@
               "cornerType": 1,
               "extrudeBevelSize": 0,
               "extrudeBevelSegments": 1,
-              "height": 321.78567599777034,
+              "height": 300,
               "type": "RectangleGeometry"
             },
             "ui": {
@@ -1689,12 +1688,11 @@
     {
       "type": "perspective",
       "perspective": {
-        "aspectRatio": 1.7645089285714286,
+        "aspectRatio": 2.0622986036519872,
         "yfov": 0.7853981633974483,
         "zfar": 100000,
         "znear": 70
-      },
-      "name": "Camera"
+      }
     }
   ],
   "extensionsUsed": [
