@@ -28,7 +28,9 @@ class Three {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.shadowMap.enabled = true;
 
-    document.body.appendChild(this.renderer.domElement);
+    document
+      .querySelector("#main_canvas")
+      ?.appendChild(this.renderer.domElement);
 
     window.addEventListener(
       "resize",
@@ -38,7 +40,7 @@ class Three {
       false
     );
 
-    this.gui = new GUI({});
+    // this.gui = new GUI({});
 
     // create 2 separate scene for gun and game
     this.scene = new THREE.Scene();

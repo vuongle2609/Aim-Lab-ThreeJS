@@ -1,12 +1,6 @@
-import {
-  Mesh,
-  BoxGeometry,
-  MeshBasicMaterial,
-  MeshPhongMaterial,
-  MeshStandardMaterial,
-} from "three";
-import { gui, scene } from "@/main";
+import { scene } from "@/main";
 import { GLTFLoader } from "@/utils/loader";
+import { MeshStandardMaterial } from "three";
 
 export default class Room {
   constructor() {
