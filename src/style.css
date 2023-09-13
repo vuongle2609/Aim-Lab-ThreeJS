@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@import url("./assets/icon/css/regular.min.css");
+@import url("./assets/icon/css/solid.min.css");
+@import url("./assets/icon/css/light.min.css");
+@import url("./assets/icon/css/fontawesome.min.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}

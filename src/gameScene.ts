@@ -1,13 +1,12 @@
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import "./style.css";
+import { GUI } from "dat.gui";
 import * as THREE from "three";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls";
-import Room from "./components/room";
-import Light from "./components/light";
-import { GUI } from "dat.gui";
-import Gun from "./components/gun";
+import Gun from "./classes/gun";
+import Light from "./classes/light";
+import { RenderPage } from "./classes/renderPage";
+import Room from "./classes/room";
 
-class Three {
+export default class GameScene extends RenderPage {
   renderer: THREE.WebGLRenderer;
 
   scene: THREE.Scene;
@@ -20,6 +19,7 @@ class Three {
   gui: GUI;
 
   constructor() {
+    super();
     this.initialize();
   }
 
@@ -27,10 +27,6 @@ class Three {
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.shadowMap.enabled = true;
-
-    document
-      .querySelector("#main_canvas")
-      ?.appendChild(this.renderer.domElement);
 
     window.addEventListener(
       "resize",
@@ -40,7 +36,9 @@ class Three {
       false
     );
 
-    // this.gui = new GUI({});
+    this.element = this.renderer.domElement;
+
+    this.gui = new GUI({});
 
     // create 2 separate scene for gun and game
     this.scene = new THREE.Scene();
@@ -119,8 +117,8 @@ class Three {
   }
 }
 
-const game = new Three();
+// const gameScene = new GameScene();
 
-export const scene = game.scene;
-export const gui = game.gui;
-export const sceneGun = game.sceneGun;
+// export const scene = gameScene.scene;
+// export const gui = gameScene.gui;
+// export const sceneGun = gameScene.sceneGun;

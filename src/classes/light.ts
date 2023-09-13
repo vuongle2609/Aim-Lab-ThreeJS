@@ -1,4 +1,4 @@
-import { scene, sceneGun } from "@/main";
+import { scene, sceneGun } from "@/app";
 import {
   DirectionalLight,
   AmbientLight,
@@ -27,10 +27,10 @@ export default class Light {
     directionalLight.shadow.camera.far = 200;
     directionalLight.shadow.mapSize.set(4096, 4096);
 
-    // const directionalLightHelper = new CameraHelper(
-    //   directionalLight.shadow.camera
-    // );
-    // scene.add(directionalLightHelper);
+    const directionalLightHelper = new CameraHelper(
+      directionalLight.shadow.camera
+    );
+    scene.add(directionalLightHelper);
 
     scene.add(directionalLight);
     sceneGun.add(directionalLight.clone());

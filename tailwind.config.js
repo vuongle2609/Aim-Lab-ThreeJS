@@ -10,6 +10,10 @@ export default {
         light_blue: "#2592ab",
         light_blue_cyan: "#30a1a7",
       },
+      borderWidth: {
+        1: "1px",
+        3: "3px",
+      },
     },
   },
   plugins: [],

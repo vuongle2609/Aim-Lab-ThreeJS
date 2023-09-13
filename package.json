@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "dat.gui": "^0.7.9"
+    "dat.gui": "^0.7.9",
+    "navigo": "^8.11.1"
   },
   "devDependencies": {
     "@types/dat.gui": "^0.7.7",

@@ -1,4 +1,4 @@
-import { scene } from "@/main";
+import { scene } from "@/app";
 import { GLTFLoader } from "@/utils/loader";
 import { MeshStandardMaterial } from "three";
 
