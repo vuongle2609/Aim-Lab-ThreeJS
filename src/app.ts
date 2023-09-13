@@ -14,8 +14,7 @@ class MainApp {
   }
 
   initialize() {
-    // this.home.render();
-    // this.gameScene.render();
+    this.home.render();
   }
 }
 
