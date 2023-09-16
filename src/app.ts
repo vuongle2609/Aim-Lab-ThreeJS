@@ -1,4 +1,3 @@
-import Navigo from "navigo"; // When using ES modules.
 import GameScene from "./gameScene";
 import { HomePage } from "./pages/home";
 import "./style.css";
@@ -20,6 +19,5 @@ class MainApp {
 
 const app = new MainApp();
 
-export const scene = app.gameScene.scene;
+export const gameScene = app.gameScene;
 export const gui = app.gameScene.gui;
-export const sceneGun = app.gameScene.sceneGun;

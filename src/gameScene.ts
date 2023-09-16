@@ -5,6 +5,7 @@ import Gun from "./classes/gun";
 import Light from "./classes/light";
 import { RenderPage } from "./classes/renderPage";
 import Room from "./classes/room";
+import { $ } from "./utils/selector";
 
 export default class GameScene extends RenderPage {
   renderer: THREE.WebGLRenderer;
@@ -17,6 +18,39 @@ export default class GameScene extends RenderPage {
 
   control: PointerLockControls;
   gui: GUI;
+
+  afterRender = () => {
+    this.control.lock();
+
+    const app = document.querySelector("#app");
+
+    // focus section -->
+
+    // planing: make custom cursor -->
+    // cursor section -->
+
+    app?.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div id="modal_focus" class="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center bg-slate-300 hidden">
+        <button class="bg-red-600 p-9" id="focus">Focus</button>
+      </div>
+
+      <div id="modal_game" class="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[20px] h-[20px] relative">
+          <div class="w-full h-[3px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-white"></div>
+          <div class="h-full w-[3px] absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-white"></div>
+        </div>
+      </div>
+    `
+    );
+
+    const btnFocus = $("#focus");
+
+    btnFocus.onclick = () => {
+      this.control.lock();
+    };
+  };
 
   constructor() {
     super();
@@ -78,18 +112,13 @@ export default class GameScene extends RenderPage {
       const gun = new Gun();
     }, 200);
 
-    const btnFocus = document.querySelector("#focus");
-    const modalFocus = document.querySelector("#modal_focus") as HTMLDivElement;
-
-    btnFocus?.addEventListener("click", () => {
-      this.control.lock();
-    });
-
     this.control.addEventListener("lock", function () {
+      const modalFocus = $("#modal_focus");
       if (modalFocus) modalFocus.style.display = "none";
     });
 
     this.control.addEventListener("unlock", function () {
+      const modalFocus = $("#modal_focus");
       if (modalFocus) modalFocus.style.display = "flex";
     });
 

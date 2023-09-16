@@ -1,4 +1,4 @@
-import { gui, sceneGun } from "@/app";
+import { gameScene } from "@/app";
 import { GLTFLoader } from "@/utils/loader";
 
 export default class Gun {
@@ -16,6 +16,6 @@ export default class Gun {
     // gui.add(gun.scene.rotation, "y", 0, 10, 0.1);
     // gui.add(gun.scene.position, "z", 15, 20, 0.1);
 
-    sceneGun.add(gun.scene);
+    gameScene.sceneGun.add(gun.scene);
   }
 }

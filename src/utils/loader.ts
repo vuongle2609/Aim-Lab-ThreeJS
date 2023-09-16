@@ -3,6 +3,7 @@ import {
   GLTF,
   GLTFLoader as threeGLTFLoader,
 } from "three/examples/jsm/loaders/GLTFLoader";
+import { FBXLoader as threeFBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 
 export const GLTFLoader = async (
   path: string,
@@ -40,3 +41,5 @@ export const GLTFLoader = async (
     );
   });
 };
+
+export const FBXLoader = async () => {};

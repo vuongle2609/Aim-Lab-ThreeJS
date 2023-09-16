@@ -1,4 +1,4 @@
-import { scene } from "@/app";
+import { gameScene } from "@/app";
 import { GLTFLoader } from "@/utils/loader";
 import { MeshStandardMaterial } from "three";
 
@@ -19,6 +19,6 @@ export default class Room {
 
     room.scene.scale.set(14, 14, 14);
 
-    scene.add(room.scene);
+    gameScene.scene.add(room.scene);
   }
 }

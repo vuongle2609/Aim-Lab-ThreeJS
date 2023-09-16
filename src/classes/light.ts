@@ -1,10 +1,5 @@
-import { scene, sceneGun } from "@/app";
-import {
-  DirectionalLight,
-  AmbientLight,
-  DirectionalLightHelper,
-  CameraHelper,
-} from "three";
+import { gameScene } from "@/app";
+import { AmbientLight, CameraHelper, DirectionalLight } from "three";
 
 export default class Light {
   constructor() {
@@ -30,13 +25,13 @@ export default class Light {
     const directionalLightHelper = new CameraHelper(
       directionalLight.shadow.camera
     );
-    scene.add(directionalLightHelper);
+    gameScene.scene.add(directionalLightHelper);
 
-    scene.add(directionalLight);
-    sceneGun.add(directionalLight.clone());
+    gameScene.scene.add(directionalLight);
+    gameScene.sceneGun.add(directionalLight.clone());
 
     const ambientLight = new AmbientLight(0xffffff, 1);
-    scene.add(ambientLight);
-    sceneGun.add(ambientLight.clone());
+    gameScene.scene.add(ambientLight);
+    gameScene.sceneGun.add(ambientLight.clone());
   }
 }

@@ -1,3 +1,4 @@
+import { gameScene } from "@/app";
 import { RenderPage } from "@/classes/renderPage";
 import { $ } from "@/utils/selector";
 
@@ -223,7 +224,8 @@ export class HomePage extends RenderPage {
 
   afterRender = () => {
     $("#gridShotPlay").onclick = (e) => {
-      console.log("asd");
+      console.log('play')
+      gameScene.render()
     };
   };
 
